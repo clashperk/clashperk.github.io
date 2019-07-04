@@ -1,3 +1,1 @@
 # ❄ ClashPerks Site
-
-Coming Soon
