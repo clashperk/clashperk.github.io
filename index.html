@@ -48,7 +48,7 @@
 
 <h2 id="tracker">Tracker</h2>
 
-<h3 id="start-command"><b>*start &lt;#tag&gt; [channel] [hexColor]</b> - starts tracking in a channel (Requires Manage Server).</h3>
+<h3 id="start-command"><b>*start &lt;#tag&gt; [channel] [hexColor]</b> - starts tracking in a channel (requires manage server).</h3>
 <blockquote>
   <p>The above command would work as<br />
 <code class="highlighter-rouge">*start &lt;#tag&gt; [channel]</code><br />
@@ -66,17 +66,17 @@
 <code class="highlighter-rouge">*start #8QU8J9LP #tracker #5970C1</code><br /></p>
 </blockquote>
 
-<h3 id="stop-command"><b>*stop &lt;#tag&gt;</b> - stops tracking for a clan (Requires Manage Server).</h3>
+<h3 id="stop-command"><b>*stop &lt;#tag&gt;</b> - stops tracking for a clan (requires manage server).</h3>
 <blockquote>
   <p>Example <code class="highlighter-rouge">*stop #8QU8J9LP</code></p>
 </blockquote>
 
-<h3 id="stop-all-command"><b>*stop-all</b> - stops tracking all clans on the server (Requires Manage Server).</h3>
+<h3 id="stop-all-command"><b>*stop-all</b> - stops tracking all clans on the server (requires manage server).</h3>
 <blockquote>
   <p>Example <code class="highlighter-rouge">*stop-all</code></p>
 </blockquote>
 
-<h3 id="edit-command"><b>*edit &lt;#tag&gt; &lt;#hexColor&gt;</b> - edits the color of embed for a clan (Requires Manage Server).</h3>
+<h3 id="edit-command"><b>*edit &lt;#tag&gt; &lt;#hexColor&gt;</b> - edits the color of embed for a clan (requires manage server).</h3>
 <blockquote>
   <p>Example <code class="highlighter-rouge">*edit #8QU8J9LP #5970C1</code></p>
 </blockquote>
@@ -164,14 +164,18 @@
 
 <h3 id="config-commnad"><b>*config</b> - displays settings of the guild.</h3>
 
-<h3 id="prefix-command"><b>*prefix [new prefix]</b> - displays or changes the prefix of the guild (Requires Manage Server).</h3>
+<h3 id="prefix-command"><b>*prefix [new prefix]</b> - displays or changes the prefix of the guild.</h3>
 <blockquote>
   <p>Examples <br />
 <code class="highlighter-rouge">*prefix</code> (displays prefix) <br />
 <code class="highlighter-rouge">*prefix !</code> (changes prefix) <br /></p>
 </blockquote>
 
-<h3 id="restrict-command"><b>*restrict &lt;member&gt;</b> - restricts or unrestricts someone from using sensitive commands (Requires Manage Server).</member></b></h3>
+<blockquote>
+  <p>Requires `Manage Server` to change prefix.</p>
+</blockquote>
+
+<h3 id="restrict-command"><b>*restrict &lt;member&gt;</b> - restricts or unrestricts someone from using sensitive commands (requires manage server).</member></b></h3>
 <blockquote>
   <p>Examples <br />
 <code class="highlighter-rouge">*restrict @Suvajit</code> <br />
