@@ -1,0 +1,8 @@
+{
+  "hosting": [
+    {
+      "target": "website",
+      "public": "public"
+    }
+  ]
+}
