@@ -3,249 +3,48 @@
 
 <head>
 	<meta charset="UTF-8">
-	<!-- Begin Jekyll SEO tag v2.5.0 -->
 	<title>ClashPerk</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta name="description" content="Discord assistant for donation tracking, searching players and clans, current war status, war log, clan war league roster, and much more." />
+	<meta name="description"
+		content="Discord assistant for donation tracking, searching players and clans, current war status, war log, clan war league roster, and much more." />
 	<meta name="title" content="ClashPerk" />
 	<meta content="https://clashperk.xyz/images/icon.png" property="og:image" />
 	<meta name="theme-color" content="#5970C1" />
-	<link rel="icon" href="images/icon.gif" type="image/gif" sizes="16x16">
+	<link rel="icon" href="./images/icon.gif" type="image/gif" sizes="16x16">
 	<link type="application/json+oembed" href="https://clashperk.xyz/embed/provider.json">
-	<!-- End Jekyll SEO tag -->
-	<link rel="stylesheet" href="assets/css/style.css?v=82c35aa20a65069eca9c1b9ac22231b9eba257fd">
-
-
-	<!-- update the version number as needed -->
-	<script defer src="/__/firebase/6.3.4/firebase-app.js"></script>
-	<!-- include only the Firebase features as you need -->
-	<script defer src="/__/firebase/6.3.4/firebase-database.js"></script>
-	<!-- initialize the SDK after all desired features are loaded -->
-	<script defer src="/__/firebase/init.js"></script>
-
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
+	<link rel="stylesheet" href="https://clashperk.xyz/assets/css/style.css">
 </head>
 
 <body>
-	<script>
-		document.addEventListener('DOMContentLoaded', function () {
-			firebase.database().ref('stats').once('value', snapshot => {
-				const data = snapshot.val();
-				document.getElementById("commands_used").innerHTML = data.commands_used;
-				document.getElementById("guilds").innerHTML = data.guilds;
-				document.getElementById("users").innerHTML = data.users;
-				document.getElementById("uptime").innerHTML = data.uptime;
-			});
-		});
-	</script>
-
 	<section class="page-header">
-		<h1 class="project-name">ClashPerk</h1>
-		<h2 class="project-tagline"></h2>
-		<a href="https://discordapp.com/api/oauth2/authorize?client_id=526971716711350273&permissions=379969&scope=bot"
-			class="btn">Invite ClashPerk</a>
-		<a href="https://discord.gg/ppuppun" class="btn">Official Discord</a>
+		<div class="navbar" id="topNav">
+			<div class="left">
+				<h4><img src="https://clashperk.xyz/images/icon.svg"> ClashPerk</h4>
+			</div>
+		</div>
 
+		<div class="project">
+			<h1 class="project-name">ClashPerk</h1>
+			<h2 class="project-tagline">
+				The Best Clash of Clans Discord Bot You Need!
+			</h2>
+			<a href="/invite"
+				class="btn">Invite ClashPerk</a>
+			<a href="/support" class="btn">Official Discord</a>
+		</div>
 	</section>
 
 	<section class="main-content">
-		<div class="stats" style="text-align:center">
-			<ul class="links">
-				<li>
-					<span class="stats" id="uptime">1 day 3 hours</span><span class="stats"> uptime,</span>
-					<span class="stats" id="users">115415</span><span class="stats"> users,</span>
-					<span class="stats" id="guilds">300</span><span class="stats"> servers,</span>
-					<span class="stats" id="commands_used">1500</span><span class="stats">x commands used</span>
-				</li>
-			</ul>
-			<hr>
+		<h1 id="heading">Under Construction</h1>
+
+		<div class="features">
+			<i class="fas fa-exclamation-triangle"></i>
+			<h2>404</h2>
+			<h3>
+				Main site is coming soon!
+			</h3>
 		</div>
-
-		<h1 id="heading">ClashPerk - Guide <img src="images/icon.png" width="25%" align="right" /></h1>
-		<h4 id="description">Discord assistant for donation tracking, searching players and clans, current war status,
-			war log, clan war league roster, and much more.
-			ClashPerk requires the following permissions to be usable~
-		</h4>
-
-		<blockquote>
-			Read Messages<br>
-			Add Reactions<br>
-			Read Message History<br>
-			Send Messages<br>
-			Embed Links<br>
-			Use External Emojis<br>
-			Attach Files<br>
-		</blockquote>
-
-		<h1 id="commands">Commands</h1>
-
-		<h2 id="tracker">Tracker</h2>
-
-		<h3 id="start-command"><b>*start &lt;#tag&gt; [channel] [hexColor]</b> - starts tracking in a channel (requires
-			manage server).</h3>
-		<blockquote>
-			<p>The above command would work as<br />
-				<code class="highlighter-rouge">*start &lt;#tag&gt; [channel]</code><br />
-				<code class="highlighter-rouge">*start &lt;#tag&gt; [hexColor]</code><br />
-				<code class="highlighter-rouge">*start &lt;#tag&gt; [hexColor] [channel]</code><br />
-				<code class="highlighter-rouge">*start &lt;#tag&gt; [channel] [hexColor]</code><br /></p>
-		</blockquote>
-
-		<blockquote>
-			<p>Examples<br />
-				<code class="highlighter-rouge">*start #8QU8J9LP</code><br />
-				<code class="highlighter-rouge">*start #8QU8J9LP #tracker</code><br />
-				<code class="highlighter-rouge">*start #8QU8J9LP #5970C1</code><br />
-				<code class="highlighter-rouge">*start #8QU8J9LP #5970C1 #tracker</code><br />
-				<code class="highlighter-rouge">*start #8QU8J9LP #tracker #5970C1</code><br /></p>
-		</blockquote>
-
-		<h3 id="stop-command"><b>*stop &lt;#tag&gt;</b> - stops tracking for a clan (requires manage server).</h3>
-		<blockquote>
-			<p>Example <code class="highlighter-rouge">*stop #8QU8J9LP</code></p>
-		</blockquote>
-
-		<h3 id="stop-all-command"><b>*stop-all</b> - stops tracking all clans on the server (requires manage server).
-		</h3>
-		<blockquote>
-			<p>Example <code class="highlighter-rouge">*stop-all</code></p>
-		</blockquote>
-
-		<h3 id="edit-command"><b>*edit &lt;#tag&gt; &lt;#hexColor&gt;</b> - edits the color of embed for a clan
-			(requires manage server).</h3>
-		<blockquote>
-			<p>Example <code class="highlighter-rouge">*edit #8QU8J9LP #5970C1</code></p>
-		</blockquote>
-
-		<h3 id="tracking-command"><b>*tracking</b> - shows all tracking details of your guild.</h3>
-
-		<h2 id="profile">Profile</h2>
-
-		<h3 id="link-profile-command"><b>*link-profile &lt;#tag&gt; [optional member]</b> - saves a player to your
-			discord account.</h3>
-		<blockquote>
-			<p>Examples <br />
-				<code class="highlighter-rouge">*link-profile #9Q92C8R20</code> <br />
-				<code class="highlighter-rouge">*link-profile #9Q92C8R20 @Suvajit</code> <br /></p>
-		</blockquote>
-
-		<h3 id="link-clan-command"><b>*link-clan &lt;#tag&gt; [optional member]</b> - saves a clan to your discord
-			account.</h3>
-		<blockquote>
-			<p>Examples <br />
-				<code class="highlighter-rouge">*link-clan #8QU8J9LP</code> <br />
-				<code class="highlighter-rouge">*link-clan #8QU8J9LP @Suvajit</code> <br /></p>
-		</blockquote>
-
-		<h3 id="profile-command"><b>*profile [optional member]</b> - shows information about your clan.</h3>
-		<blockquote>
-			<p>Examples <br />
-				<code class="highlighter-rouge">*profile</code> <br />
-				<code class="highlighter-rouge">*profile @Suvajit</code> <br /></p>
-		</blockquote>
-
-		<h3 id="my-clan-command"><b>*my-clan [optional member]</b> - shows information about your clan.</h3>
-		<blockquote>
-			<p>Examples <br />
-				<code class="highlighter-rouge">*my-clan</code> <br />
-				<code class="highlighter-rouge">*my-clan @Suvajit</code> <br /></p>
-		</blockquote>
-
-		<h2 id="lookup">Lookup</h2>
-
-		<h3 id="clan-command"><b>*clan &lt;#tag&gt;</b> - clash of clans clan lookup command.</h3>
-		<blockquote>
-			<p>Example <code class="highlighter-rouge">*clan #8QU8J9LP</code></p>
-		</blockquote>
-
-		<h3 id="player-commnad"><b>*player &lt;#tag&gt;</b> - clash of clans player lookup commnad.</h3>
-		<blockquote>
-			<p>Example <code class="highlighter-rouge">*player #9Q92C8R20</code></p>
-		</blockquote>
-
-		<h3 id="units-command"><b>*units &lt;#tag&gt;</b> - shows troops and spells of the player.</h3>
-		<blockquote>
-			<p>Example <code class="highlighter-rouge">*units #9Q92C8R20</code></p>
-		</blockquote>
-
-		<h3 id="search-clan-command"><b>*search-clan &lt;#tag&gt;</b> - search clans by name.</h3>
-		<blockquote>
-			<p>Example <code class="highlighter-rouge">*search-clan air hounds</code></p>
-		</blockquote>
-
-		<h3 id="th-compo-command"><b>*th-compo &lt;#tag&gt;</b> - calculates your clan war weight.</h3>
-		<blockquote>
-			<p>Example <code class="highlighter-rouge">*th-compo #8QU8J9LP</code></p>
-		</blockquote>
-
-		<h3 id="warlog-command"><b>*warlog &lt;#tag&gt;</b> - clash of clans war log lookup command.</h3>
-		<blockquote>
-			<p>Example <code class="highlighter-rouge">*warlog #8QU8J9LP</code></p>
-		</blockquote>
-
-		<h3 id="missing-attacks-command"><b>*missing &lt;#tag&gt;</b> - shows info about missing attacks.</h3>
-		<blockquote>
-			<p>Example <code class="highlighter-rouge">*missing #8QU8J9LP</code></p>
-		</blockquote>
-
-		<h3 id="members-command"><b>*members &lt;#tag&gt; [--th/-th] [th level]</b> - list of clan members.</tag></b>
-		</h3>
-		<blockquote>
-			<p>Examples <br />
-				<code class="highlighter-rouge">*members #8QU8J9LP</code> (list by rank) <br />
-				<code class="highlighter-rouge">*members #8QU8J9LP -th</code> (list by th) <br />
-				<code class="highlighter-rouge">*members #8QU8J9LP -th 10</code> (shows only th10) <br />
-				<code class="highlighter-rouge">*members #8QU8J9LP -th 12</code> (shows only th12) <br /></p>
-		</blockquote>
-
-		<h2 id="fun">Other</h2>
-
-		<h3 id="add-note-command"><b>*add-note &lt;#tag&gt; &lt;note&gt;</b> - creates note for a player (requires
-			manage server).</h3>
-		<h3 id="del-note-command"><b>*del-note &lt;#tag&gt;</b> - deletes note for a player (requires manage server).
-		</h3>
-		<h3 id="facts-command"><b>*facts</b> - displays random clash of clans facts.</h3>
-		<h3 id="meme-command"><b>*meme</b> - displays random clash of clans memes.</h3>
-		<h3 id="vote-command"><b>*vote</b> - gives you the link to vote for clashperks.</h3>
-
-		<h2 id="config">Config</h2>
-
-		<h3 id="config-commnad"><b>*config</b> - displays settings of the guild.</h3>
-
-		<h3 id="prefix-command"><b>*prefix [new prefix]</b> - displays or changes the prefix of the guild.</h3>
-		<blockquote>
-			<p>Examples <br />
-				<code class="highlighter-rouge">*prefix</code> (displays prefix) <br />
-				<code class="highlighter-rouge">*prefix !</code> (changes prefix) <br /></p>
-		</blockquote>
-
-		<blockquote>
-			<p>Requires `Manage Server` to change prefix.</p>
-		</blockquote>
-
-		<h3 id="restrict-command"><b>*restrict &lt;member&gt;</b> - restricts or unrestricts someone from using
-			sensitive commands (requires manage server).</member></b></h3>
-		<blockquote>
-			<p>Examples <br />
-				<code class="highlighter-rouge">*restrict @Suvajit</code> <br />
-				<code class="highlighter-rouge">*restrict 444432489818357760</code> <br /></p>
-		</blockquote>
-
-		<blockquote>
-			<p>Use it again on the same user to remove them from the restriction.</p>
-		</blockquote>
-
-		<h2 id="util">Util</h2>
-
-		<h3 id="about-command"><b>*about</b> - shows information about the bot.</h3>
-		<h3 id="guide-command"><b>*guide</b> - shows information about how to use bot.</h3>
-		<h3 id="help-command"><b>*help</b> - displays a list of commands or information about a command.</h3>
-		<h3 id="invite-"><b>*invite</b> - gets the bot invite link.</h3>
-		<h3 id="ping-command"><b>*ping</b> - pings me!</h3>
-		<h3 id="stats-command"><b>*stats</b> - displays statistics about the bot.</h3>
-
-		<footer class="site-footer" style="text-align:center">
-			<span class="site-footer-credits">© 2019 SUVAJIT</span>
-		</footer>
 	</section>
 
 	<!-- Global site tag (gtag.js) - Google Analytics -->
@@ -256,7 +55,6 @@
 		gtag('js', new Date());
 		gtag('config', 'UA-145054648-1');
 	</script>
-
 </body>
 
 </html>
