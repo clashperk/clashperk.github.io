@@ -1,17 +1,22 @@
 {
   "hosting": [
     {
-      "target": "website",
+      "target": "dev-website",
       "public": "public",
       "redirects": [
         {
           "source": "/invite",
-          "destination": "https://discordapp.com/api/oauth2/authorize?client_id=526971716711350273&permissions=388161&scope=bot",
+          "destination": "https://discordapp.com/api/oauth2/authorize?client_id=526971716711350273&permissions=537259073&scope=bot",
           "type": 301
         },
         {
           "source": "/support",
           "destination": "https://discord.gg/ppuppun",
+          "type": 301
+        },
+        {
+          "source": "/patron",
+          "destination": "https://www.patreon.com/bePatron?u=14584309",
           "type": 301
         }
       ],

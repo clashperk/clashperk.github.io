@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:400,700");
+@import url('https://fonts.googleapis.com/css?family=Catamaran:100,200,300,400,500,600,700,800,900');
 
 html {
     font-family: sans-serif;
@@ -13,7 +14,7 @@ body {
     font-size: 16px;
     line-height: 1.5;
     color: #606c71;
-    background: #102027
+    background: #ffffff;
 }
 
 * {
@@ -27,7 +28,7 @@ a {
 }
 
 a:hover {
-    text-decoration: underline
+    text-decoration: none;
 }
 
 /* Buttons */
@@ -81,72 +82,152 @@ a:hover {
     }
 }
 
+/* Navbar */
+nav {
+    font-family: 'Catamaran', sans-serif;
+    background-color: transparent;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+nav ul {
+    margin: 0rem;
+    margin-left: -2rem;
+    margin-bottom: 0rem;
+    -webkit-transition: all 0.6s ease-out;
+    -moz-transition: all 0.6s ease-out;
+    -o-transition: all 0.6s ease-out;
+    -ms-transition: all 0.6s ease-out;
+    transition: all 0.6s ease-out;
+    
+}
+
+nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+nav ul > li {
+    padding: 15px;
+    display: inline-block;
+    transition: all .3s ease;
+}
+
+nav ul > li:not(:last-of-type):hover {
+    background-color: transparent;
+    text-decoration: none;
+}
+
+nav ul > li:first-of-type {
+    background-color: transparent;
+}
+
+nav ul > li:last-of-type {
+    float: right;
+}
+
+nav ul > li:last-of-type a .fa {
+    font-size: 21px
+}
+
+nav ul > li:last-of-type {
+    position: relative;
+    display: none;
+}
+
+nav ul > ol {
+    position: absolute;
+    right: 0;
+    background: #f8f8f8;
+    text-align: left;
+    list-style: none;
+    display: none;
+}
+
+nav ul > ol > li {
+    width: 100vw;
+    margin: 0;
+    padding: 0;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    transition: all .3s ease;
+}
+
+nav ul > ol > li > a {
+    margin: 20px;
+    color: black;
+}
+
+nav ul > ol > li:hover {
+    background: transparent;
+    cursor: pointer;
+}
+
+nav ul > li:not(:first-child) {
+    float: right;
+}
+
+@media screen and (max-width:680px) {
+    nav ul {
+        background-color: white;
+    }
+
+    nav ul > li:not(:first-child) {
+        display: none;
+    }
+
+    nav ul > li:last-of-type {
+        display: block;
+    }
+
+    nav ul li a {
+        color: #000000;
+        text-decoration: none;
+    }
+}
+
+@media screen and (min-width:680px) {
+    nav ul > ol > li {
+      display:none;
+    }
+}
+
 /* Page Header */
 .page-header {
     color: #fff;
     text-align: center;
+    background-image: linear-gradient(135deg, #305af3 10%, #7b30f3);
+    margin: 0rem;
 }
 
-.navbar {
-    overflow: hidden;
-    font-size: 2rem
-}
-
-.navbar .right h4 { /* Not Using */
-    float: right;
-    display: block;
-    color: #f2f2f2;
-    text-align: center;
-    text-decoration: none;
-    font-size: 1.8rem;
-    margin: 1rem;
-}
-
-.navbar .left img {
-    float: left;
-    height: 40px;
-    width: 40px;
-    color: #00ffff;
-}
-
-.navbar .left h4 {
-    float: left;
-    color: white;
-    text-decoration: none;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    font-size: 1.8rem;
-    margin: 1rem;
-}
-
-@media screen and (min-width: 64em) {
+@media screen and (min-width: 1000px) {
     .page-header {
-        padding: 1rem 6rem
-    }
-
-    .page-header .project {
-        padding: 1.5rem;
+        padding: 12.1rem 6rem;
     }
 }
 
-@media screen and (min-width: 42em) and (max-width: 64em) {
+@media screen and (min-width: 700px) and (max-width: 1000px) {
     .page-header {
-        padding: 1rem 4rem
-    }
-
-    .page-header .project {
-        padding: 2rem;
+        padding: 10rem 4rem
     }
 }
 
-@media screen and (max-width: 42em) {
+@media screen and (min-width: 300px) {
     .page-header {
-        padding: 1.2rem 1rem
+        padding: 10rem 2rem
     }
+}
 
-    .page-header .project {
-        padding: 1.5rem;
+@media screen and (min-width: 400px) {
+    .page-header {
+        padding: 12rem 2rem
+    }
+}
+
+@media screen and (min-width: 500px) {
+    .page-header {
+        padding: 14rem 2rem
     }
 }
 
@@ -201,47 +282,14 @@ a:hover {
 
 /* Main Content */
 .main-content {
+    color: white;
     word-wrap: break-word;
     text-align: center;
+    background: rgb(74, 130, 241)
 }
 
 .main-content :first-child {
     margin-top: 0;
-}
-
-@media screen and (min-width: 64em) {
-    .main-content {
-        max-width: 64rem;
-        padding: 2rem 3rem;
-        margin: 0 auto;
-        font-size: 1.1rem
-    }
-
-    .main-content h1 {
-        font-size: 2rem;
-    }
-}
-
-@media screen and (min-width: 42em) and (max-width: 64em) {
-    .main-content {
-        padding: 2rem 3rem;
-        font-size: 1.1rem
-    }
-
-    .main-content h1 {
-        font-size: 2rem;
-    }
-}
-
-@media screen and (max-width: 42em) {
-    .main-content {
-        padding: 2rem 1rem;
-        font-size: 1rem
-    }
-
-    .main-content h1 {
-        font-size: 1.5rem;
-    }
 }
 
 .main-content .features {
@@ -249,17 +297,11 @@ a:hover {
     text-align: center;
     width: 300px;
     height: 200px;
+    margin-bottom: 2rem;
     padding: 5px;
     border-radius: 8px;
-    /* background: #223239;
+    /*background: #223239;
     box-shadow: 0 4px 8px #000;*/
-}
-
-.main-content .features:hover {
-    color: rgba(255, 255, 255, 0.8);
-    text-decoration: none;
-    background-color: rgba(255, 255, 255, 0.2);
-    border-color: rgba(255, 255, 255, 0.3)
 }
 
 .main-content .features h2 {
@@ -272,5 +314,188 @@ a:hover {
 
 .main-content i {
     font-size: 5rem;
-    color: hsl(54, 93%, 54%);
+    color: #f5f6fa;
+}
+
+@media screen and (min-width: 64em) {
+    .main-content {
+        padding: 5rem 10rem;
+        margin: 0 auto;
+        font-size: 1.1rem
+    }
+
+    .main-content h1 {
+        font-size: 3rem;
+    }
+}
+
+@media screen and (min-width: 42em) and (max-width: 64em) {
+    .main-content {
+        padding: 2rem 3rem;
+        font-size: 1.1rem
+    }
+
+    .main-content h1 {
+        font-size: 2.5rem;
+    }
+}
+
+@media screen and (max-width: 42em) {
+    .main-content {
+        padding: 2rem 1rem;
+        font-size: 1rem
+    }
+
+    .main-content h1 {
+        font-size: 2rem;
+    }
+}
+
+/* Premuim */
+.premium-section {
+    color: white;
+    background: #102027;
+    word-wrap: break-word;
+    text-align: center;
+}
+
+.premium-section img {
+    height: 50px;
+    width: 200px;
+    border-radius: 80px;
+}
+
+.premium-section :first-child {
+    margin-top: 0;
+}
+
+@media screen and (min-width: 64em) {
+    .premium-section {
+        padding: 5rem 10rem;
+        margin: 0 auto;
+        font-size: 1.1rem
+    }
+
+    .premium-section h1 {
+        font-size: 3rem;
+    }
+}
+
+@media screen and (min-width: 42em) and (max-width: 64em) {
+    .premium-section {
+        padding: 2rem 3rem;
+        font-size: 1.1rem
+    }
+
+    .premium-section h1 {
+        font-size: 2.5rem;
+    }
+}
+
+@media screen and (max-width: 42em) {
+    .premium-section {
+        padding: 2rem 1rem;
+        font-size: 1rem
+    }
+
+    .premium-section h1 {
+        font-size: 2rem;
+    }
+}
+
+.premium-section .features {
+    display: inline-block;
+    text-align: center;
+    width: 300px;
+    height: 200px;
+    padding: 5px;
+    border-radius: 8px;
+    /*background: #223239;
+    box-shadow: 0 4px 8px #000;*/
+}
+
+/* Footer */
+.footer-section {
+    font-family: 'Catamaran', sans-serif;
+    overflow: hidden;
+    background-color: #2a2c30;
+}
+
+.footer-section i {
+    color: #ffffff;
+}
+
+.footer-section .right {
+    float: right;
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    color: white;
+    bottom: 0;
+}
+
+.footer-section .left {
+    float: left;
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    margin: 0rem;
+    color: white;
+}
+
+.footer-section h4 {
+    margin: 0.1rem;
+}
+.footer-section h3 {
+    margin: 0.1rem;
+    margin-bottom: 0.7rem;
+}
+.footer-section .right .icons {
+    font-size: 2rem;
+    display: flex;
+    flex-direction: row;
+}
+.footer-section .right .icons a {
+    padding: 0.4rem;
+}
+
+@media screen and (min-width: 64em) {
+    .footer-section {
+        padding: 1.5rem 3rem;
+        font-size: 1rem
+    }
+
+    .footer-section .right .btn {
+        text-align: center;
+    }
+}
+
+@media screen and (min-width: 42em) and (max-width: 64em) {
+    .footer-section {
+        padding: 1.5rem;
+        font-size: 1rem
+    }
+
+    .footer-section .right .btn {
+        text-align: center;
+    }
+
+}
+
+@media screen and (max-width: 42em) {
+    .footer-section {
+        padding: 1.5rem;
+        font-size: 1rem
+    }
+
+    .footer-section .right {
+        float: left;
+    }
+
+    .footer-section .right .btn {
+        text-align: center;
+        margin-top: 1rem;
+    }
 }
