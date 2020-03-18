@@ -168,7 +168,7 @@ nav ul > li:not(:first-child) {
     float: right;
 }
 
-@media screen and (max-width:680px) {
+@media screen and (max-width: 42.5em) {
     nav ul {
         background-color: white;
     }
@@ -187,7 +187,7 @@ nav ul > li:not(:first-child) {
     }
 }
 
-@media screen and (min-width:680px) {
+@media screen and (min-width: 42.5em) {
     nav ul > ol > li {
       display:none;
     }
@@ -201,31 +201,19 @@ nav ul > li:not(:first-child) {
     margin: 0rem;
 }
 
-@media screen and (min-width: 1000px) {
+@media screen and (min-width: 64em) {
     .page-header {
         padding: 12.1rem 6rem;
     }
 }
 
-@media screen and (min-width: 700px) and (max-width: 1000px) {
+@media screen and (min-width: 42em) and (max-width: 64em) {
     .page-header {
         padding: 10rem 4rem
     }
 }
 
-@media screen and (min-width: 300px) {
-    .page-header {
-        padding: 10rem 2rem
-    }
-}
-
-@media screen and (min-width: 400px) {
-    .page-header {
-        padding: 12rem 2rem
-    }
-}
-
-@media screen and (min-width: 500px) {
+@media screen and (max-width: 42em) {
     .page-header {
         padding: 14rem 2rem
     }
