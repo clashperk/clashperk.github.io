@@ -18,6 +18,11 @@
           "source": "/patron",
           "destination": "https://www.patreon.com/bePatron?u=14584309",
           "type": 301
+        },
+        {
+          "source": "/github",
+          "destination": "https://github.com/clashperk",
+          "type": 301
         }
       ],
       "rewrites": [
