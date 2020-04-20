@@ -213,9 +213,27 @@ nav ul > li:not(:first-child) {
     }
 }
 
-@media screen and (max-width: 42em) {
+@media screen and (min-width: 20em) {
     .page-header {
-        padding: 14rem 2rem
+        padding: 6rem 2rem
+    }
+}
+
+@media screen and (min-width: 22em) {
+    .page-header {
+        padding: 10rem 2rem
+    }
+}
+
+@media screen and (min-width: 25em) {
+    .page-header {
+        padding: 13rem 2rem
+    }
+}
+
+@media screen and (min-width: 25em) and (min-height: 50em), (min-width: 23em) {
+    .page-header {
+        padding: 15rem 2rem
     }
 }
 
