@@ -36,8 +36,11 @@
 
     <section class="page-header">
         <div class="project">
-            <img src="./images/icon.svg">
-            <h1 class="project-name">ClashPerk</h1>
+            <div class="project-name">
+                <img src="./images/icon.png">
+                <h1>ClashPerk <span>✓ BOT</span></h1>
+            </div>
+
             <h2 class="project-tagline">
                 The Best Clash of Clans Discord Bot You Need!
             </h2>
@@ -99,13 +102,941 @@
         </div>
     </section>
 
-    <section class="premium-section">
-        <h1 id="heading">Want more than that?</h1>
-        <h2>Consider subscribing to one of our premium plans on Patreon.</h2>
+    <section class="command-header">
+        <h2>Command List</h2>
+        <div class="command-x">
+            <div class="command-list">
+                <table>
+                    <caption style="text-align: left; padding-left: 8px;">Search</caption>
+                    <tr>
+                        <td><em><a href="#cgboard">cgboard</a></em></td>
+                        <td>Setup clan games board</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <em><a href="#donationlog">donationlog</a></em>
+                        </td>
+                        <td>
+                            Setup donation log in a channel
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <em>
+                                <a href="#playerlog">playerlog</a>
+                            </em>
+                        </td>
+                        <td>
+                            Setup player log in a channel
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <em>
+                                <a href="#toggle">toggle</a>
+                            </em>
+                        </td>
+                        <td>
+                            Toggles logs and boards
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <em>
+                                <a href="#remove">remove</a>
+                            </em>
+                        </td>
+                        <td>
+                            Removes a clan from the server
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="command-list">
+                <table>
+                    <tr>
+                        <td>units</td>
+                        <td>shows troop, spell and hero levels</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            cwl
+                        </td>
+                        <td>
+                            shows some info about clan war league
+                        </td>
+                    </tr>
+                </table>
+            </div>
 
-        <a class="patron" href="/patron">
-            <img src="./images/patron.png" alt="BECOME A PATRON">
-        </a>
+            <div class="command-list">
+                <table>
+                    <tr>
+                        <td>cwl</td>
+                        <td>shows info about current cwl rounds</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            cwlstats
+                        </td>
+                        <td>
+                            shows some stats of current cwl match rate
+                        </td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="command-list">
+                <table>
+                    <tr>
+                        <td>stats</td>
+                        <td>displays stats of the bot</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            restrict
+                        </td>
+                        <td>
+                            restricts or unrestricts someone from usning the bot
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </section>
+    <section class="commands">
+        <!-- / ----- CLAN MANAGEMENT CATEGORY ---- / -->
+        <hr id="clan-management">
+        <div class="heading">
+            <h2>Clan Management</h2>
+            <h3>In order to use these commands, you need to be a leader / co-leader of the clan.</h3>
+        </div>
+
+        <hr id="cgboard">
+        <div>
+            <h5 class="cmd">*cgboard <em>[clanTag]<em></h5>
+            <h5 class="admin">Admin only</h5>
+            <h6>Setup a live updating clan games board</h6>
+            <h6><em>Example<em></h6>
+            <h6 class="example">
+                <em>*cgboard</em> #8QU8J9LP
+            </h6>
+            <div class="info">
+                <ol>Things to know..</ol>
+                <ul>
+                    <li>
+                        The bot needs following permissions to be usable...
+                        <ul>
+                            <li>Use External Emojis</li>
+                            <li>Embed Links</li>
+                            <li>Send Messages</li>
+                        </ul>
+                    </li>
+                    <li>
+                        You can setup multiple clans in a channel.
+                    </li>
+                    <li>
+                        The board updates every 30 min.
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <hr id="onlineboard">
+        <div>
+            <h5 class="cmd">*onlineboard <em>[clanTag]</em></h5>
+            <h5 class="admin">Admin only</h5>
+            <h6>Setup a live updating last online board</h6>
+            <h6><em>Example<em></h6>
+            <h6 class="example">
+                <em>*onlineboard</em> #8QU8J9LP
+            </h6>
+            <div class="info">
+                <ol>Things to know..</ol>
+                <ul>
+                    <li>
+                        The bot needs Use External Emojis and Embed Links permissions.
+                    </li>
+                    <li>
+                        You can setup multiple clans in a channel.
+                    </li>
+                    <li>
+                        The board updates every 90 sec.
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <hr id="donationlog">
+
+        <div>
+            <h5 class="cmd">*donationlog <em>[clanTag]</em></h5>
+            <h5 class="admin">Admin only</h5>
+            <h6>Setup a donation log in a discord channel</h6>
+            <h6><em>Example<em></h6>
+            <h6 class="example">
+                <em>*donationlog</em> #8QU8J9LP
+            </h6>
+            <div class="info">
+                <ol>Things to know..</ol>
+                <ul>
+                    <li>
+                        The bot needs Use External Emojis and Embed Links permissions.
+                    </li>
+                    <li>
+                        You can setup multiple clans in a channel.
+                    </li>
+                    <li>
+                        The log updates every 90 sec.
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <hr id="playerlog">
+
+        <div>
+            <h5 class="cmd">*playerlog <em>[clanTag]</em></h5>
+            <h5 class="admin">Admin only</h5>
+            <h6>Setup a clan member join / leave log in a discord channel</h6>
+            <h6><em>Example</em></h6>
+            <h6 class="example">
+                <em>*playerlog</em> #8QU8J9LP
+            </h6>
+            <div class="info">
+                <ol>Things to know..</ol>
+                <ul>
+                    <li>
+                        The bot needs Use External Emojis and Embed Links permissions.
+                    </li>
+                    <li>
+                        You can setup multiple clans in a channel.
+                    </li>
+                    <li>
+                        The log updates every 90 sec.
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <hr class="toggle">
+        <div>
+            <h5 class="cmd">*toggle <em>[METHOD] [clanTag]<em></h5>
+            <h5 class="admin">Admin only</h5>
+            <h6>
+                Toogle specified logs / boards on the server
+            </h6>
+            <div class="param">
+                <ol>Parameters</ol>
+                <ul>
+                    <li>
+                        donationlog (dl)
+                    </li>
+                    <li>
+                        playerlog (pl)
+                    </li>
+                    <li>
+                        lastonline (lo)
+                    </li>
+                    <li>
+                        clangame (cg)
+                    </li>
+                    <li>
+                        clanembed (ce)
+                    </li>
+                </ul>
+            </div>
+            <h6><em>Example</em></h6>
+            <h6 class="example">
+                <em>*toggle</em> donationlog #8QU8J9LP <br>
+            </h6>
+            <h6 class="example">
+                <em>*toggle</em> playerlog #8QU8J9LP <br>
+            </h6>
+            <h6 class="example">
+                <em>*toggle</em> lo #8QU8J9LP <br>
+            </h6>
+            <h6 class="example">
+                <em>*toggle</em> clangame #8QU8J9LP <br>
+            </h6>
+            <h6 class="example">
+                <em>*toggle</em> clanembed #8QU8J9LP <br>
+            </h6>
+            <h6 class="example">
+                <em>*toggle</em> pl #8QU8J9LP <br>
+            </h6>
+        </div>
+
+        <hr id="remove">
+        <div>
+            <h5 class="cmd">*remove <em>[clanTag]</em></h5>
+            <h5 class="admin">Admin only</h5>
+            <h6>
+                Deletes a clan from your server
+            </h6>
+            <h6><em>Example</em></h6>
+            <h6 class="example">
+                <em>*remove </em>#8QU8J9LP
+            </h6>
+        </div>
+
+        <!-- / ----- CLAN ACTIVITY CATEGORY ----- / -->
+        <hr id="clan-activity">
+        <div class="heading">
+            <h2>Clan Activity</h2>
+            <h6>Shows your clan activity anywhere anytime</h6>
+        </div>
+
+        <hr id="lastonline">
+        <div>
+            <h5 class="cmd">*lastonline <em>[clanTag]</em></h5>
+            <h6>
+                Shows an approximate last-online time of clan members
+            </h6>
+            <h6><em>Example</em></h6>
+            <h6 class="example">
+                <em>*lastonline</em> #8QU8J9LP
+            </h6>
+
+            <div class="info">
+                <ol>Things to know..</ol>
+                <ul>
+                    <li>
+                        The bot needs Use External Emojis and Embed Links permissions.
+                    </li>
+                    <li>
+                        The command doesn't work if you haven't enabled last online board.
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <hr id="clangames">
+        <div>
+            <h5 class="cmd">*clangame <em>[clanTag]</em></h5>
+            <h6>
+                Shows clan game points of your clan members
+            </h6>
+
+            <h6><em>Aliases</em></h6>
+            <h6 class="aliases">clangames</h6>
+            <h6 class="aliases">cg</h6>
+            <h6 class="aliases">points</h6>
+
+            <h6><em>Example</em></h6>
+            <h6 class="example">
+                <em>*clangame</em> #8QU8J9LP<br>
+            </h6>
+            <h6 class="example">
+                <em>*points</em> #8QU8J9LP
+            </h6>
+
+            <div class="info">
+                <ol>Things to know..</ol>
+                <ul>
+                    <li>
+                        The bot needs Use External Emojis and Embed Links permissions.
+                    </li>
+                    <li>
+                        The command doesn't work if you haven't enabled clan games board.
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <hr id="clans">
+        <div>
+            <h5 class="cmd">*clans</h5>
+            <h6>
+                Shows all clans related to the server / guild
+            </h6>
+
+            <div class="info">
+                <ol>Things to know..</ol>
+                <ul>
+                    <li>
+                        The bot needs Use External Emojis and Embed Links permissions.
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- / ----- PROFILE CATEGORY ---- / -->
+        <hr id="profile-category">
+        <div class="heading">
+            <h2>Profile</h2>
+            <h6>Link your clan and profile to use commands without any tag</h6>
+        </div>
+
+        <hr id="link">
+        <div>
+            <h5 class="cmd">*link <em>[METHOD] [TAG]</em></h5>
+            <h6>Links a clan or player to your discord account</h6>
+
+            <h6><em>Parameters</em></h6>
+            <h6 class="param">
+                <em>METHOD</em>
+                <ul>
+                    <li>
+                        <em>player</em> = links a player to your discord account
+                    </li>
+                    <li>
+                        <em>clan</em> = links a clan to your discord account
+                    </li>
+                </ul>
+                <em>TAG</em>
+                <ul>
+                    <li>
+                        <em>CLAN TAG</em>
+                    </li>
+                    <li>
+                        <em>PLAYER TAG</em>
+                    </li>
+                </ul>
+            </h6>
+            <ul>
+                <li>
+                    <em>no parameters</em> = links a clan to your discord account
+                </li>
+                <li>
+                    <em>METHOD</em> = links in-game player or clan to your account
+                </li>
+            </ul>
+
+            <h6><em>Example</em></h6>
+            <h6 class="example">
+                <em>*link</em> #8QU8J9LP<br>
+            </h6>
+            <h6 class="example">
+                <em>*link</em> clan #8QU8J9LP<br>
+            </h6>
+            <h6 class="example">
+                <em>*link</em> player #9Q92C8R20
+            </h6>
+
+            <h6 class="info">
+                <ol><em>Things to know..</em></ol>
+                <ul>
+                    <li>
+                        You can only link one clan to your account.
+                    </li>
+                    <li>
+                        But you can link multiple players to your account.
+                    </li>
+                </ul>
+            </h6>
+        </div>
+
+        <hr id="profile">
+        <div>
+            <h5 class="cmd">*profile <em>[USER]</em></h5>
+            <h6>Shows information about your profile</h6>
+            <h6><em>Parameters</em></h6>
+            <ul>
+                <li>
+                    <em>no parameters</em> = shows information about your own profile
+                </li>
+                <li>
+                    <em>USER</em> = shows information about the user's profile
+                </li>
+            </ul>
+            <h6><em>Example</em></h6>
+            <h6 class="example">
+                <em>*profile</em>
+            </h6>
+            <h6 class="example">
+                <em>*profile</em> @SUVAJIT
+            </h6>
+        </div>
+
+        <hr id="unlink">
+        <div>
+            <h5 class="cmd">*unlink <em>[PLAYER TAG]</em></h5>
+            <h6>Unlinks a player form your discord account</h6>
+            <h6><em>Example</em></h6>
+            <h6 class="example">
+                <em>*unlink</em> #9Q92C8R20
+            </h6>
+        </div>
+
+        <!-- / ----- SEARCH CATEGORY ---- / -->
+        <hr id="search-category">
+        <div class="heading">
+            <h2>Clash Search</h2>
+            <h6>Search clans, player, clan wars, war weights, town-hall compositions, donations etc</h6>
+        </div>
+
+        <hr id="clan">
+        <div>
+            <h5 class="cmd">*clan <em>[clanTag]</em></h5>
+            <h6>
+                Shows some basic info about your clan
+            </h6>
+
+            <h6><em>Example</em></h6>
+            <h6 class="example">
+                <em>*clan</em> #8QU8J9LP
+            </h6>
+
+            <div class="info">
+                <ol>Things to know..</ol>
+                <ul>
+                    <li>
+                        The bot needs following permissions to be usable...
+                        <ul>
+                            <li>
+                                Use External Emojis
+                            </li>
+                            <li>
+                                Embed Links
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        The command works if your clan is <a href="#link">linked</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <hr id="badge">
+        <div>
+            <h5 class="cmd">*badge <em>[clanTag]</em></h5>
+            <h6>Shows clan badge in high resolution</h6>
+            <h6><em>Aliases</em></h6>
+            <h6 class="aliases">clanbadge</h6>
+            <h6><em>Example</em></h6>
+            <h6 class="example"><em>*badge</em> #8QU8J9LP</h6>
+        </div>
+
+        <hr id="clansearch">
+        <div>
+            <h5 class="cmd">*clansearch <em>[clanTag]</em></h5>
+            <h6>Search clans by name</h6>
+
+            <h6><em>Aliases</em></h6>
+            <h6 class="aliases">search</h6>
+            <h6 class="aliases">cs</h6>
+
+            <h6><em>Example</em></h6>
+            <h6 class="example">
+                <em>*clansearch</em> air hounds
+            </h6>
+        </div>
+
+        <hr id="currentwar">
+        <div>
+            <h5 class="cmd">*currentwar <em>[clanTag]</em></h5>
+            <h6>Shows info about current war</h6>
+
+            <h6><em>Aliases</em></h6>
+            <h6 class="aliases">
+                <em>cw</em>
+            </h6>
+
+            <h6><em>Example</em></h6>
+            <h6 class="example">
+                <em>*currentwar</em> #8QU8J9LP
+            </h6>
+
+            <h6 class="info">
+                <ol><em>Things to know..</em></ol>
+                <ul>
+                    <li>
+                        The bot requires following permissions to be usable..
+                        <ul>
+                            <li>
+                                Use External Emojis
+                            </li>
+                            <li>
+                                Embed Links
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        The command doesn't work if the clan war log is private.
+                    </li>
+                </ul>
+            </h6>
+        </div>
+
+        <hr id="donations">
+        <div>
+            <h5 class="cmd">*donations <em>[clanTag]</em></h5>
+            <h6>List of clan members with donations</h6>
+
+            <h6><em>Aliases</em></h6>
+            <h6 class="aliases">donation</h6>
+            <h6 class="aliases">don</h6>
+
+            <h6><em>Example</em></h6>
+            <h6 class="example">
+                <em>*donations</em> #8QU8J9LP
+            </h6>
+        </div>
+
+        <hr id="members">
+        <div>
+            <h5 class="cmd">*members <em>[clanTag]</em></h5>
+            <h6>List of clan members</h6>
+
+            <h6><em>Example</em></h6>
+            <h6 class="example">
+                <em>*members</em> #8QU8J9LP
+            </h6>
+        </div>
+
+        <hr id="remaining">
+        <div>
+            <h5 class="cmd">*remaining <em>[clanTag]</em></h5>
+            <h6>Shows info about remaining attacks</h6>
+
+            <h6><em>Aliases</em></h6>
+            <h6 class="aliases">missing</h6>
+            <h6 class="aliases">rem</h6>
+
+            <h6><em>Example</em></h6>
+            <h6 class="example">
+                <em>*remaining</em> #8QU8J9LP <br>
+            </h6>
+            <h6 class="example">
+                <em>*missing</em> #8QU8J9LP
+            </h6>
+
+            <h6 class="info">
+                <ol><em>Things to know..</em></ol>
+                <ul>
+                    <li>
+                        The command doesn't work if the war log is private.
+                    </li>
+                </ul>
+            </h6>
+        </div>
+
+        <hr id="compo">
+        <div>
+            <h5 class="cmd">*compo <em>[clanTag]</em></h5>
+            <h6>Calculates town-hall compositions of a clan</h6>
+
+            <h6><em>Example</em></h6>
+            <h6 class="example">
+                <em>*compo</em> #8QU8J9LP
+            </h6>
+        </div>
+
+        <hr id="trophies">
+        <div>
+            <h5 class="cmd">*trophies <em>[clanTag]</em></h5>
+            <h6>List of clan members with trophies</h6>
+
+            <h6><em>Example</em></h6>
+            <h6 class="example">
+                <em>*trophies</em> #8QU8J9LP
+            </h6>
+        </div>
+
+        <hr id="warweight">
+        <div>
+            <h5 class="cmd">*warweight <em>[clanTag]</em></h5>
+            <h6>List of clan members with town-hall and hero levels</h6>
+
+            <h6><em>Aliases</em></h6>
+            <h6 class="aliases">ww</h6>
+
+            <h6><em>Example</em></h6>
+            <h6 class="example">
+                <em>*warweight</em> #8QU8J9LP
+            </h6>
+        </div>
+
+        <hr id="warlog">
+        <div>
+            <h5 class="cmd">*warlog <em>[clanTag]</em></h5>
+            <h6>Shows your clan war log</h6>
+
+            <h6><em>Example</em></h6>
+            <h6 class="example">
+                <em>*warlog</em> #8QU8J9LP
+            </h6>
+
+            <h6 class="info">
+                <ol><em>Things to know..</em></ol>
+                <ul>
+                    <li>
+                        The command does not work if the clan war log is private.
+                    </li>
+                </ul>
+            </h6>
+        </div>
+
+        <hr id="player">
+        <div>
+            <h5 class="cmd">*player <em>[playerTag]</em></h5>
+            <h6>Shows info about your in-game profile</h6>
+
+            <h6><em>Example</em></h6>
+            <h6 class="example">
+                <em>*player</em> #9Q92C8R20
+            </h6>
+
+            <h6 class="info">
+                <ol><em>Things to know..</em></ol>
+                <ul>
+                    <li>
+                        The command requires following permissions to be usable..
+                        <ul>
+                            <li>
+                                Use External Emojis
+                            </li>
+                            <li>Embed Links</li>
+                        </ul>
+                    </li>
+                    <li>
+                        The command works without tag if you're <a href="#link">linked</a>
+                    </li>
+                </ul>
+            </h6>
+        </div>
+
+        <hr id="units">
+        <div>
+            <h5 class="cmd">*units <em>[playerTag]</em></h5>
+            <h6>Shows troop, spell & hero levels</h6>
+
+            <h6><em>Alias</em></h6>
+            <h6 class="aliases">troops</h6>
+
+            <h6><em>Example</em></h6>
+            <h6 class="example">
+                <em>*units</em> #9Q92C8R20
+            </h6>
+
+            <h6 class="info">
+                <ol><em>Things to know..</em></ol>
+                <ul>
+                    <li>
+                        The command requires following permissions to be usable..
+                        <ul>
+                            <li>
+                                Use External Emojis
+                            </li>
+                            <li>Embed Links</li>
+                        </ul>
+                    </li>
+                    <li>
+                        The command works without tag if you're <a href="#link">linked</a>
+                    </li>
+                </ul>
+            </h6>
+        </div>
+
+        <!-- / ----- CWL CATEGORY ----- / -->
+        <hr id="cwl-category">
+        <div class="heading">
+            <h2>CWL</h2>
+            <h3>These commands only work during CWL</h3>
+        </div>
+
+        <hr id="cwl-roster">
+        <div>
+            <h5 class="cmd">*cwl roster <em>[clanTag]</em></h5>
+            <h6>
+                Shows CWL roster & town-hall distribution of each clan
+            </h6>
+
+            <h6><em>Example</em></h6>
+            <h6 class="example">
+                <em>*cwl roster</em> #8QU8J9LP
+            </h6>
+        </div>
+
+        <hr id="cwl-round">
+        <div>
+            <h5 class="cmd">*cwl round <em>[clanTag]</em></h5>
+            <h6>Shows information about CWL rounds</h6>
+
+            <h6><em>Example</em></h6>
+            <h6 class="example">
+                <em>*cwl round</em> #8QU8J9LP
+            </h6>
+        </div>
+
+        <hr id="cwl-attacks">
+        <div>
+            <h5 class="cmd">*cwl attacks <em>[clanTag]</em></h5>
+            <h6>Shows attacks of current CWL</h6>
+
+            <h6><em>Example</em></h6>
+            <h6 class="example">
+                <em>*cwl attacks</em> #8QU8J9LP
+            </h6>
+        </div>
+
+        <hr id="cwl-remaining">
+        <div>
+            <h5 class="cmd">*cwl remaining <em>[clanTag]</em></h5>
+            <h6>Shows remaining attacks of current CWL</h6>
+
+            <h6><em>Example</em></h6>
+            <h6 class="example">
+                <em>*cwl remaining</em> #8QU8J9LP
+            </h6>
+        </div>
+
+        <hr id="cwl-stats">
+        <div>
+            <h5 class="cmd">*cwl stats <em>[clanTag]</em></h5>
+            <h6>Shows stats of CWL</h6>
+
+            <h6><em>Example</em></h6>
+            <h6 class="example">
+                <em>*cwl stats</em> #8QU8J9LP
+            </h6>
+
+            <h6 class="info">
+                <ol><em>Things to know..</em></ol>
+                <ul>
+                    <li>
+                        The commands works when round 2 is available
+                    </li>
+                </ul>
+            </h6>
+        </div>
+
+        <hr id="cwl-members">
+        <div>
+            <h5 class="cmd">*cwl members <em>[clanTag]</em></h5>
+            <h6>Full list of the member particpated in CWL</h6>
+
+            <h6><em>Example</em></h6>
+            <h6 class="example">
+                <em>*cwl members</em> #8QU8J9LP
+            </h6>
+        </div>
+
+        <hr id="cwl-top">
+        <div>
+            <h5 class="cmd">*cwl top <em>[clanTag]</em></h5>
+            <h6>Shows most valuable clan members for CWL</h6>
+
+            <h6><em>Example</em></h6>
+            <h6>
+                <em>*cwl top</em> #8QU8J9LP
+            </h6>
+        </div>
+
+        <!-- / ----- CONFIG COMMANDS ---- / -->
+        <hr id="config-category">
+        <div class="heading">
+            <h2>
+                Configuration
+            </h2>
+            <h6>Manage your server settings</h6>
+        </div>
+
+        <hr id="config">
+        <div>
+            <h5 class="cmd">*config</h5>
+            <h6>Shows settings of the server / guild</h6>
+        </div>
+
+        <hr id="prefix">
+        <div>
+            <h5 class="cmd">*prefix <em>[NEW]<em></h5>
+            <h5 class="admin">Admin only</h5>
+            <h6>Shows or changes prefix of the server / guild</h6>
+
+            <h6><em>Example</em></h6>
+            <h6 class="example">
+                <em>*prefix</em> ?
+            </h6>
+        </div>
+
+        <hr id="restrict">
+        <div>
+            <h5 class="cmd">*restrict [USER]</h5>
+            <h5 class="admin">Admin only</h5>
+            <h6>Restricts or unrestricts someone from using commands in your server / guild</h6>
+
+            <h6><em>Example</em></h6>
+            <h6 class="example">
+                <em>*restrict</em> @SUVAJIT
+            </h6>
+        </div>
+
+        <!-- / ----- OTHER CATEGORY ---- / -->
+        <hr id="other-category">
+        <div class="heading">
+            <h2>Other</h2>
+            <h6>Some other commands just for fun</h6>
+        </div>
+
+        <hr id="meme">
+        <div>
+            <h5 class="cmd">*meme</h5>
+            <h6>Show some random memes</h6>
+        </div>
+
+        <hr id="cmeme">
+        <div>
+            <h5 class="cmd">*cmeme</h5>
+            <h6>Show some random clash of clans related memes</h6>
+        </div>
+
+        <hr id="facts">
+        <div>
+            <h5 class="cmd">*facts</h5>
+            <h6>Shows some random clash of clans facts</h6>
+        </div>
+
+        <hr id="vote">
+        <div>
+            <h5 class="cmd">*vote</h5>
+            <h6>Shows you the link to vote clashperk</h6>
+        </div>
+
+        <!-- / ----- UTIL CATEGORY ------ / -->
+        <hr id="util-category">
+        <div class="heading">
+            <h2>Util</h2>
+            <h6>Some utility commands</h6>
+        </div>
+
+        <hr id="patron">
+        <div>
+            <h5 class="cmd">*patron</h5>
+            <h6>Shows you the link to become a <a href="/patron">patron</a></h6>
+        </div>
+
+        <hr id="redeem">
+        <div>
+            <h5 class="cmd">*redeem</h5>
+            <h6>Redeems your patreon subscription</h6>
+        </div>
+
+        <hr id="about">
+        <div>
+            <h5 class="cmd">*about</h5>
+            <h6>Shows information about the bot</h6>
+        </div>
+
+        <hr id="invite">
+        <div>
+            <h5 class="cmd">*invite</h5>
+            <h6>Shows the bot invite <a href="/invite">link</a></h6>
+        </div>
+
+        <hr id="ping">
+        <div>
+            <h5 class="cmd">*ping</h5>
+            <h6>Pings the bot</h6>
+        </div>
+
+        <hr id="stats">
+        <div>
+            <h5 class="cmd">*stats</h5>
+            <h6>Shows statistics about the bot</h6>
+        </div>
     </section>
 
     <section class="footer-section">
