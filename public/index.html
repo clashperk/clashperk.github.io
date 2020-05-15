@@ -16,7 +16,7 @@
     <link type="application/json+oembed" href="https://clashperk.xyz/assets/css/embed.json">
     <!--CSS-->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
-    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/styles.css">
 </head>
 
 <body>
@@ -107,7 +107,7 @@
                 <table>
                     <caption style="text-align: left; padding-left: 8px;">Clan Management</caption>
                     <tr>
-                        <td><em><a href="#cgboard">cgboard</a></em></td>
+                        <td><em><a href="#clangamesboard">cgboard</a></em></td>
                         <td>Setup clan games board</td>
                     </tr>
                     <tr>
@@ -115,7 +115,7 @@
                         <td>Setup donation log in a channel</td>
                     </tr>
                     <tr>
-                        <td><em><a href="#onlineboard">onlineboard</a></em></td>
+                        <td><em><a href="#lastonlineboard">onlineboard</a></em></td>
                         <td>Setup a last-online board</td>
                     </tr>
                     <tr>
@@ -170,15 +170,15 @@
                         <td>Shows some basic info about a clan</td>
                     </tr>
                     <tr>
-                        <td><em><a href="#badge">badge</a></em></td>
+                        <td><em><a href="#clan-badge">badge</a></em></td>
                         <td>Shows your clan badge</td>
                     </tr>
                     <tr>
-                        <td><em><a href="#clansearch">clansearch</a></em></td>
+                        <td><em><a href="#clan-search">clansearch</a></em></td>
                         <td>Search clans by name</td>
                     </tr>
                     <tr>
-                        <td><em><a href="#currentwar">currentwar</a></em></td>
+                        <td><em><a href="#current-war">currentwar</a></em></td>
                         <td>Shows some info about current war</td>
                     </tr>
                     <tr>
@@ -190,7 +190,7 @@
                         <td>Shows some info about remaining attacks</td>
                     </tr>
                     <tr>
-                        <td><em><a href="#compo">compo</a></em></td>
+                        <td><em><a href="#th-compo">compo</a></em></td>
                         <td>Calculates your town-hall compositions</td>
                     </tr>
                     <tr>
@@ -287,7 +287,7 @@
             <h3>In order to use these commands, you need to be a leader / co-leader of the clan.</h3>
         </div>
 
-        <hr id="cgboard">
+        <hr id="clangamesboard">
         <div>
             <h5 class="cmd">*cgboard <em>[clanTag]<em></h5>
             <h5 class="admin">Admin only</h5>
@@ -317,7 +317,7 @@
             </div>
         </div>
 
-        <hr id="onlineboard">
+        <hr id="lastonlineboard">
         <div>
             <h5 class="cmd">*onlineboard <em>[clanTag]</em></h5>
             <h5 class="admin">Admin only</h5>
@@ -394,7 +394,7 @@
             </div>
         </div>
 
-        <hr class="toggle">
+        <hr id="toggle">
         <div>
             <h5 class="cmd">*toggle <em>[METHOD] [clanTag]<em></h5>
             <h5 class="admin">Admin only</h5>
@@ -674,7 +674,7 @@
             </div>
         </div>
 
-        <hr id="badge">
+        <hr id="clan-badge">
         <div>
             <h5 class="cmd">*badge <em>[clanTag]</em></h5>
             <h6>Shows clan badge in high resolution</h6>
@@ -684,7 +684,7 @@
             <h6 class="example"><em>*badge</em> #8QU8J9LP</h6>
         </div>
 
-        <hr id="clansearch">
+        <hr id="clan-search">
         <div>
             <h5 class="cmd">*clansearch <em>[clanTag]</em></h5>
             <h6>Search clans by name</h6>
@@ -699,7 +699,7 @@
             </h6>
         </div>
 
-        <hr id="currentwar">
+        <hr id="current-war">
         <div>
             <h5 class="cmd">*currentwar <em>[clanTag]</em></h5>
             <h6>Shows info about current war</h6>
@@ -788,7 +788,7 @@
             </h6>
         </div>
 
-        <hr id="compo">
+        <hr id="th-compo">
         <div>
             <h5 class="cmd">*compo <em>[clanTag]</em></h5>
             <h6>Calculates town-hall compositions of a clan</h6>
@@ -906,7 +906,7 @@
         </div>
 
         <!-- / ----- CWL CATEGORY ----- / -->
-        <hr id="cwl-category">
+        <hr id="cwl">
         <div class="heading">
             <h2>CWL</h2>
             <h3>These commands only work during CWL</h3>
@@ -1052,7 +1052,7 @@
             <h6>Show some random memes</h6>
         </div>
 
-        <hr id="cmeme">
+        <hr id="cocmeme">
         <div>
             <h5 class="cmd">*cmeme</h5>
             <h6>Show some random clash of clans related memes</h6>
