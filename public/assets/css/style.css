@@ -413,7 +413,7 @@ nav ul > li:not(:first-child) {
     .command-header {
         padding: 2rem 1rem;
         margin: 0 auto;
-        font-size: 1.1rem
+        font-size: 1rem
     }
 
     .command-header h1 {
@@ -429,7 +429,7 @@ nav ul > li:not(:first-child) {
     .command-header {
         padding: 3rem 2rem;
         margin: -0.1rem;
-        font-size: 1.1rem
+        font-size: 1rem
     }
     .command-header .command-list {
         width: 450px;
