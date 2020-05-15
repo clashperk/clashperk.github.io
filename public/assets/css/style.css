@@ -202,28 +202,50 @@ nav ul > li:not(:first-child) {
     margin: 0rem;
 }
 
+.page-header img {
+    width: 80px;
+    height: 80px;
+}
+
 @media screen and (min-width: 64em) {
     .page-header {
-        padding: 5rem 6rem
+        padding: 12.1rem 6rem;
     }
 }
 
 @media screen and (min-width: 42em) and (max-width: 64em) {
     .page-header {
-        padding: 3rem 4rem
+        padding: 10rem 4rem
     }
 }
 
-@media screen and (max-width: 42em) {
+@media screen and (min-width: 20em) {
     .page-header {
-        padding: 3.5rem 1rem;
+        padding: 6rem 2rem
     }
 }
 
+@media screen and (min-width: 22em) {
+    .page-header {
+        padding: 10rem 2rem
+    }
+}
+
+@media screen and (min-width: 25em) {
+    .page-header {
+        padding: 13rem 2rem
+    }
+}
+
+@media screen and (min-width: 25em) and (min-height: 50em), (min-width: 23em) {
+    .page-header {
+        padding: 15rem 2rem
+    }
+}
 
 /* Project Name*/
 .project-name {
-    margin-top: 2rem;
+    margin-top: 0;
     margin-bottom: 0.1rem
 }
 
@@ -236,20 +258,8 @@ nav ul > li:not(:first-child) {
     vertical-align: middle;
 }
 
-.project-name h1 {
-    vertical-align: middle;
-    margin: 0rem;
-    margin-right: 0.5rem;
-    font-weight: normal;
-}
-
-.project-name img {
-    width: 80px;
-    height: 80px;
-}
-
 @media screen and (min-width: 64em) {
-    .project-name h1 {
+    .project-name {
         font-size: 3.25rem
     }
     .project-name span {
@@ -260,32 +270,14 @@ nav ul > li:not(:first-child) {
 }
 
 @media screen and (min-width: 42em) and (max-width: 64em) {
-    .project-name h1 {
+    .project-name {
         font-size: 2.25rem
-    }
-    .project-name img {
-        width: 60px;
-        height: 60px;
-    }
-    .project-name span {
-        font-size: 1rem;
-        padding: 6px;
     }
 }
 
 @media screen and (max-width: 42em) {
-    .project-name h1 {
-        font-size: 1.75rem;
-        font-weight: normal;
-    }
-    .project-name img {
-        width: 70px;
-        height: 70px;
-    }
-    .project-name span {
-        font-size: 1rem;
-        padding: 3px;
-        width: 60px;
+    .project-name {
+        font-size: 1.75rem
     }
 }
 
