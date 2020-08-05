@@ -15,7 +15,7 @@
           "type": 301
         },
         {
-          "source": "/patron",
+          "source": "/patreon",
           "destination": "https://www.patreon.com/clashperk",
           "type": 301
         },
